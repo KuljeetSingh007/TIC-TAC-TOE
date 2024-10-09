@@ -12,7 +12,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("https://cdn.vectorstock.com/i/500p/90/61/tic-tac-toe-xo-game-seamless-pattern-black-board-vector-6779061.jpg");
+    background-image: url(https://cdn.vectorstock.com/i/500p/90/61/tic-tac-toe-xo-game-seamless-pattern-black-board-vector-6779061.jpg);
     background-size: contain;
     opacity: 0.3;
     /* Adjust the opacity of the image */
@@ -48,7 +48,7 @@ body::before {
 }
 
 .reset:hover {
-    background-color: #50727B;
+    background-color: #538f9f;
     color: #CCD3CA;
 }
 
