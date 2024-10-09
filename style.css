@@ -95,9 +95,9 @@ body::before {
     max-width: 380px;
     width: 40vw;
     height: 35vw;
-    min-width: 300px;
+    min-width: 360px;
     max-height: 360px;
-    min-height: 300px;
+    min-height: 340px;
     gap: 1px;
     transition: 0.4s ease;
 }
@@ -115,16 +115,16 @@ body::before {
 @media screen and (max-width: 700px) {
 
     h1 {
-        font-size: 6vw;
+        font-size: 8vw;
     }
 
     .outerBox {
         justify-content: center;
         align-items: center;
-        width: 45vw;
-        height: 45vw;
-        min-height: 180px;
-        min-width: 180px;
+        width: 55vw;
+        height: 55vw;
+        min-height: 270px;
+        min-width: 280px;
     }
 
     .box {
