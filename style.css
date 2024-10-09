@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     justify-content: center;
     height: 98vh;
@@ -11,28 +17,13 @@ body {
 }
 
 h1 {
-    font-size: 45px;
+    padding-bottom: 20px;
+    font-size: 4.5vw;
     color: rgb(255, 215, 175);
     font-family: "Bungee", sans-serif;
     font-weight: 500;
+    transition: 0.4s ease;
 }
-
-@media screen and (max-width: 700px) {
-    body {
-        justify-content: center;
-    }
-
-h1{
-    font-size: 35px;
-}
-
-    .outerBox {
-        min-width: 280px !important;
-        min-height: 280px !important;
-        padding: 10px;
-    }
-}
-
 
 
 body::before {
@@ -44,31 +35,11 @@ body::before {
     bottom: 0;
     background-image: url(https://cdn.vectorstock.com/i/500p/90/61/tic-tac-toe-xo-game-seamless-pattern-black-board-vector-6779061.jpg);
     background-size: contain;
-    opacity: 0.3;
-    /* Adjust the opacity of the image */
+    opacity: 0.05;
     z-index: -1;
-    /* Send the image behind the content */
 }
 
-.outerBox {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 340px;
-    min-height: 340px;
-    gap: 2px;
-    margin: 0;
-    padding: 0;
-}
 
-.box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100% / 3);
-    width: calc(100% / 3.049);
-    font-size: 300%;
-    background-color: #EEEDEB;
-}
 
 .reset {
     font-size: 20px;
@@ -76,6 +47,8 @@ body::before {
     margin: 25px 10px;
     width: 200px;
     padding: 16px 10px;
+    font-weight: 900;
+
 }
 
 .reset:hover {
@@ -88,21 +61,91 @@ body::before {
     color: #fff1ea;
 }
 
-.radius1 {
+.t-left {
     border-top-left-radius: 10px;
 }
 
-.radius2 {
+.t-right {
     border-top-right-radius: 10px;
 }
 
-.radius3 {
+.b-right {
     border-bottom-right-radius: 10px;
 }
 
-.radius4 {
+.b-left {
     border-bottom-left-radius: 10px;
 }
+
+
+.container {
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.outerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 380px;
+    width: 40vw;
+    height: 35vw;
+    min-width: 300px;
+    max-height: 360px;
+    min-height: 300px;
+    gap: 1px;
+    transition: 0.4s ease;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(33.33% - 2px);
+    width: calc(33.33% - 10px);
+    font-size: 300%;
+    background-color: #EEEDEB;
+}
+
+@media screen and (max-width: 700px) {
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    .outerBox {
+        justify-content: center;
+        align-items: center;
+        width: 45vw;
+        height: 45vw;
+        min-height: 180px;
+        min-width: 180px;
+    }
+
+    .box {
+        min-height: 0px;
+        min-width: 0px;
+        max-width: calc(33.33% - 2px);
+        max-height: calc(33.33% - 2px);
+        flex-grow: 1;
+    }
+
+    .reset {
+        display: flex;
+        height: 8vw;
+        max-width: 30vw;
+        font-size: 4vw;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+    }
+}
+
 
 
 .styleX {
